@@ -7,6 +7,14 @@ def count_vowels(string)
 end
 
 def triplets(string)
-  # banana.chars -> ['b', 'a', 'n', 'a', 'n', 'a']
-  string.chars.map { |c| }
+  result = []
+  for i in 0..string.length - 3
+    result << [string[i] , string[i + 1], string[i + 2]].join("")
+  end
+
+  result
+end
+
+def count_valid_triplets(string)
+  triplets(string).select { |t| count_vowels(t) == 2 }.size
 end

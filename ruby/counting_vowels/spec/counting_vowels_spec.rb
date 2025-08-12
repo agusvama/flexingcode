@@ -14,5 +14,12 @@ describe "counting vowels in the substrings from a string" do
 
   it "returns an array of triplets from the string, forwards only" do
     expect(triplets("banana")).to eq(["ban", "ana", "nan", "ana"])
+    expect(triplets("chickens")).to eq(["chi", "hic", "ick", "cke", "ken", "ens"])
+  end
+
+  it "returns the number of triplets with exactly two vowels" do
+    expect(count_valid_triplets("banana")).to eq(2)
+    expect(count_valid_triplets("chickens")).to be_zero
+    expect(count_valid_triplets("groove")).to eq(3)
   end
 end
