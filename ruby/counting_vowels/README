@@ -1,0 +1,4 @@
+Given a string, return the number of substrings that contain exactly 2 vowels.
+- Split the string only forward
+  Example: "banana" -> "ban", "ana", "nan", "ana"
+  Result: 2 (only "ana" and "ana" contain exactly two vowels)
